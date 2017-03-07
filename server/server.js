@@ -2,11 +2,12 @@ var express = require('express');
 var app = express(); //lancio express
 var path = require('path');
 
-// var utenti = require('./utenti/utenti.js');
-// app.use('/utenti', utenti);
+var utenti = require('./utenti/utenti.js');
+app.use('/users', utenti);
 
 // app.use('/images', express.static(path.join(__dirname,'..','client','immagini')));
 
+//SERVO LA INDEX.HTML
 app.get('/', function(req,res){
   res.sendFile(path.join(__dirname,"..","client","index.html"));
 });
