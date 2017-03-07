@@ -84,6 +84,34 @@ router.get('/cognome/:cognome', function(req, res) {
               }
 });
 
+//aggiornate un utente
+router.post('/id/:id', function(req, res) {
+  var id = req.params.id;
+  var utente = listautenti.find(function(el){
+    return el.id == id;
+  });
+  utente.nome = "Stefano";
+  utente.cognome = "Borzoni"
+  var indice = listautenti.indexOf(utente);
+  listautenti.splice(indice,0);
+  jsonfile.writeFile(path.join(__dirname,"database.json"),listautenti,function(err){});
+  res.json(listautenti);
+});
+
+//creare e aggiungere un nuovo utente in coda all'array
+router.post('/',function(req,res){
+  var nuovo = req.body;
+  console.log(nuovo);
+  var indici =[];
+  for(var i = 0; i < listautenti.length; i++) {
+    indici[i] = listautenti[i].id;
+  }
+  var ultimo_id= Math.max(...indici);
+  nuovo.id = ultimo_id +1;
+  listautenti.push(nuovo);
+  jsonfile.writeFile(path.join(__dirname,"database.json"),listautenti,function(err){});
+  res.json(listautenti);
+});
 
 
 module.exports = router;
