@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- http://www.omdbapi.com/?s=space -->
+<head>
+    <meta charset="UTF-8">
+    <title>Social</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+  <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <h2>Lista Film</h2>
+        <input type="text" id="nome_film">
+        <button id="bottoneRicerca" disabled="disabled">Cerca Film</button>
+        <span id="tot_film"></span>
+        <div id="loading">Ricerca in corso...</div>
+      </br>
+          <table class="table table-striped mia">
+              <thead>
+                  <tr>
+                      <th>Titolo</th>
+                      <th>Anno</th>
+                      <th>Genere</th>
+                      <th>Locandina</th>
+                  </tr>
+              </thead>
+              <!-- popolamento tabella dinamicamente -->
+              <tbody id="tbody">
+
+              </tbody>
+          </table>
+      </div>
+      <div class="col-md-4 col-sm-8 col-xs-12">
+
+      </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
+    <!-- <script src="../db/db.json"></script> -->
+ <!-- <script src="js/utility.js"></script>  -->
+
+  <!-- <script src="cercafilms.js"></script>
+  <script src="Films.js "></script> -->
+</html>
