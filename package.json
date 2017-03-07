@@ -4,6 +4,7 @@
   "description": "esercizio finale",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
