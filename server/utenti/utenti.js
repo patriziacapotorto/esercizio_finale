@@ -31,6 +31,7 @@ router.get('/id/:id', function(req, res) {
   // }
 });
 
+//http://localhost:5000/users/genere?genere=Male
 router.get('/genere', function(req,res){
   var genere = req.query.genere;
   var listafiltrata = listautenti.filter(function(el){
@@ -55,6 +56,24 @@ router.get('/nome/:nome', function(req, res) {
                 res.status(404).send("utente non trovato");
               }
 });
+
+//http://localhost:5000/users/id/10
+router.delete('/id/:id', function(req, res) {
+  var id = req.params.id;
+
+  var utente = listautenti.find(function(el){
+    return el.id == id;
+  });
+  var indice = listautenti.indexOf(utente);
+  listautenti.splice(indice,1);
+  res.json(listautenti);
+  // if(utente){
+  //        res.status(200).json(utente);
+  //           }else{
+  //               res.status(404).send("utente non trovato");
+  //             }
+});
+
 
 //ricerca http://localhost:5000/users/cognome/Harvey
 router.get('/cognome/:cognome', function(req, res) {
