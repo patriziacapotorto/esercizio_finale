@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var jsonfile = require('jsonfile');
 
-var listautenti = require('./database.js');
+var listautenti = require('./database.json');
 
 //LE ROTTE PARTONO DA /UTENTI
 // PAGINA PRINCIPALE UTENTI

@@ -1,4 +1,4 @@
-var users = [{"id":1,"nome":"Joseph","cognome":"Clark","genere":"Male"},
+[{"id":1,"nome":"Joseph","cognome":"Clark","genere":"Male"},
 {"id":2,"nome":"Joshua","cognome":"Johnson","genere":"Male"},
 {"id":3,"nome":"Steven","cognome":"Barnes","genere":"Male"},
 {"id":4,"nome":"Douglas","cognome":"Simmons","genere":"Male"},
@@ -97,5 +97,4 @@ var users = [{"id":1,"nome":"Joseph","cognome":"Clark","genere":"Male"},
 {"id":97,"nome":"Catherine","cognome":"Cole","genere":"Female"},
 {"id":98,"nome":"Peter","cognome":"Peters","genere":"Male"},
 {"id":99,"nome":"Charles","cognome":"Adams","genere":"Male"},
-{"id":100,"nome":"Helen","cognome":"Martinez","genere":"Female"}];
-module.exports = users;
+{"id":100,"nome":"Helen","cognome":"Martinez","genere":"Female"}]
