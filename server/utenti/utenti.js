@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var jsonfile = require('jsonfile');
-
+var path = require('path');
 var listautenti = require('./database.json');
 
 //LE ROTTE PARTONO DA /UTENTI
@@ -66,12 +66,8 @@ router.delete('/id/:id', function(req, res) {
   });
   var indice = listautenti.indexOf(utente);
   listautenti.splice(indice,1);
+  jsonfile.writeFile(path.join(__dirname,"database.json"),listautenti,function(err){});
   res.json(listautenti);
-  // if(utente){
-  //        res.status(200).json(utente);
-  //           }else{
-  //               res.status(404).send("utente non trovato");
-  //             }
 });
 
 
