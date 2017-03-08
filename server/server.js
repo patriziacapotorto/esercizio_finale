@@ -16,8 +16,8 @@ app.get('/', function(req,res){
 var utenti = require('./utenti/utenti.js');
 app.use("/users",utenti);
 
-app.listen(5000, function(){
-  console.log("server in ascolto su http://localhost:5000");
+app.listen(3001, function(){
+  console.log("server in ascolto su http://localhost:3001");
 });
 // app.get('/films', function(req,res){
 //   res.json({"titolo":"rocky","anno":"2000"});
